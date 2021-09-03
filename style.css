@@ -193,10 +193,10 @@ body {
   display: none;
 }
 .bio .close-button img {
-  content: url("pictures/x-square.svg");
+  content: url("x-square.svg");
 }
 .bio .close-button :hover {
-  content: url("pictures/x-square-red.svg");
+  content: url("x-square-red.svg");
 }
 
 .go-page {
