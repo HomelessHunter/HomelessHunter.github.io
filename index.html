@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="animation.js"></script> -->
+    <title>Document</title>
+</head>
+<body>
+    <div class="video-container">
+        <div class="video" id="player"></div>
+                <!-- <iframe class="video" width="1920" height="1080" src="https://www.youtube.com/embed/lFxpL4VCUrM?autoplay=1&controls=0&loop=1&muted=1&playlist=lFxpL4VCUrM&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+    </div>
+    <div class="overlay"></div>
+    <div class="borders foreground">
+        <div class="go-page">
+            <div class="gallery">
+                <div class="promo">
+                    <div class="video-gallery" id="player-promo"></div>
+                    <div class="overlay-gallery"></div>
+                </div>
+                <div class="music">
+                    <div class="video-gallery" id="player-music"></div>
+                    <div class="overlay-gallery"></div>
+                </div>
+                <div class="events">
+                    <div class="video-gallery" id="player-events"></div>
+                    <div class="overlay-gallery"></div>
+                </div>
+            </div>
+            <div class="gallery-buttons">
+                <button class="button gallery-button"><h3>Promo</h3></button>
+                <button class="button gallery-button"><h3>Music</h3></button>
+                <button class="button gallery-button"><h3>Events</h3></button>
+            </div>
+        </div>
+        <div id="upper-border">
+            <img class="logo" src="pictures/logo.png" alt="">
+            <div class="bio">
+                <button id="bio" class="button bio-button"><h5>BIO</h5></button>
+                <button id="close" class="close-button"><img src="" alt=""></button>
+            </div>
+        </div>
+        <div id="lower-border">
+            <div class="socials">
+            <a href="#"><img class="socials-logo" id="insta" src="pictures/insta.png" alt=""></a>
+            <a href="#"><img class="socials-logo" id="tg" src="pictures/tg.png" alt=""></a>
+            <a href="#"><img class="socials-logo" id="wup" src="pictures/wup.png" alt=""></a>
+        </div>
+            </div>
+    </div>
+    <section class="section-1">
+        <div class="position-fixed top-50 start-50 translate-middle middle">
+            <div class="middle-text">
+                <h1>Let's Create?</h1>
+                <button id="go" class="button go-button"><h3>GO</h3></button>
+                <!-- <a class="text-decoration-none" id="explore" href="#"><h3>GO</h3></a> -->
+            </div>
+        </div>
+    </section>
+    <script src="autoplay.js"></script>
+</body>
+</html>

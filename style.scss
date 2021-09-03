@@ -1,0 +1,432 @@
+$black: #000000;
+$transparent: #00000000;
+$white: #fff;
+$red: #E50914;
+$border-width: 1px;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    // font-family: 'Poppins', sans-serif;
+}
+body {
+    background: #111;
+    color: #fff; 
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes slidein {
+    0% {
+        position: fixed;
+        background-color: $black;
+        width: 100%;
+        right: 0;
+        bottom: 0;
+        min-height: 90px;
+        margin-top: 90px;
+        display: flex;
+        align-items: center;
+    }
+
+    100% {
+        position: fixed;
+        background-color: $black;
+        width: 100%;
+        right: 0;
+        bottom: 0;
+        min-height: 100%;
+        margin-top: 90px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+@keyframes slideout {
+    100% {
+        position: fixed;
+        background-color: $black;
+        width: 100%;
+        right: 0;
+        bottom: 0;
+        min-height: 90px;
+        margin-top: 90px;
+        display: flex;
+        align-items: center;
+    }
+
+    0% {
+        position: fixed;
+        background-color: $black;
+        width: 100%;
+        right: 0;
+        bottom: 0;
+        min-height: 100%;
+        margin-top: 90px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.overlay {
+    position: absolute;
+    background-color: rgba(17, 17, 17, 0.281);
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 1;
+}
+
+.foreground {
+    z-index: 3;
+}
+
+.video {
+    position: absolute;
+    right: 0;
+    bottom: 0%;
+    // top: 0;
+    // left: 0;
+    z-index: 0;
+}
+
+.video-container {
+    animation-name: fadein;
+    animation-duration: 5s;
+}
+
+#upper-border {
+    position: fixed;
+    background-color: $black;
+    width: 100%;
+    right: 0;
+    top: 0;
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#lower-border {
+    position: fixed;
+    background-color: $black;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    min-height: 90px;
+    margin-top: 90px;
+    display: flex;
+    align-items: center;
+}
+
+.borders {
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.button {
+    background-color: $transparent;
+    border: solid;
+    color: $white;
+    border-width: $border-width;
+    display: inline-block;
+}
+
+.section-1 {
+    .middle {
+        z-index: 2;
+    }
+    .go-button {
+        padding: 10px;
+        padding-right: 50px;
+        padding-left: 50px;
+        h3 {
+            margin: 0px;
+        }
+    }
+
+    .go-button:hover{
+        color: $red;
+    }
+}
+
+.middle-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    margin-left: 8px;
+    max-width: 90px;
+}
+
+.socials {
+    margin-left: 24px;
+}
+
+.socials-logo {
+    max-width: 45px;
+    margin-left: 12px;
+}
+
+.bio {
+    margin-right: 24px;
+    .bio-button {
+        padding: 5px;
+        padding-right: 30px;
+        padding-left: 30px;
+        h5 {
+            margin: 0px;
+        }
+    }:hover {
+        color: $red;
+    }
+
+    .close-button {
+        background-color: $transparent;
+        border: none;
+        display: none;
+        img {
+            content
+            : url('pictures/x-square.svg');
+        }:hover {
+            content: url('pictures/x-square-red.svg');
+        }
+    }
+  
+}
+
+.go-page {
+    animation-fill-mode: forwards;
+    animation-name: slidein;
+    animation-direction: normal;
+    animation-duration: 1s;
+    position: fixed;
+    background-color: $black;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    min-height: 90px;
+    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+
+    .gallery-buttons {
+        position: absolute;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        button {
+            h3 {
+                padding: 10px;
+                margin: 0px;
+            }
+        }:hover{
+            color: $red;
+        }
+    }
+}
+
+.go-page-reverse {
+    animation-fill-mode: forwards;
+    animation-name: slideout;
+    animation-direction: normal;
+    animation-duration: 1s;
+    position: fixed;
+    background-color: $black;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    min-height: 90px;
+    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+
+    .gallery-buttons {
+        position: absolute;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        button {
+            h3 {
+                padding: 10px;
+                margin: 0px;
+            }
+        }:hover{
+            color: $red;
+        }
+    }
+}
+
+@keyframes gallery {
+    0% {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        // display: flex;
+        display: none;
+        opacity: 0;
+        justify-content: space-between ;
+    }
+
+    100% {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        opacity: 1;
+        justify-content: space-between ;
+    }
+}
+
+@keyframes reverse-gallery {
+    100% {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        // display: flex;
+        display: none;
+        opacity: 0;
+        justify-content: space-between ;
+    }
+
+    0% {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        opacity: 1;
+        justify-content: space-between ;
+    }
+}
+
+.gallery {
+    animation-name: gallery;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    // display: flex;
+    display: none;
+    opacity: 0;
+    // justify-content: space-between ;
+    div {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        // margin-top: 100px;
+        // margin-bottom: 100px;
+        background-color: $white;
+    }
+
+    .events {
+        background-color: tomato;
+        z-index: 0;
+    }
+
+    .music {
+        background-color: tan;
+        z-index: 1;
+        padding-bottom: 100px;
+    }
+
+    .promo {
+        background-color: teal;
+        z-index: 2;
+    }
+    #player-music {
+        padding-left: 400px;
+        padding-bottom: 100px;
+    }
+
+    .video-gallery {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .overlay-gallery {
+        position: absolute;
+        z-index: 4;
+        background-color: $transparent;
+    }
+}
+
+.reverse-gallery {
+    animation-name: reverse-gallery;
+    animation-duration: 1s;
+    // animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    // display: flex;
+    display: none;
+    opacity: 0;
+    // justify-content: space-between ;
+    div {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        // margin-top: 100px;
+        // margin-bottom: 100px;
+        background-color: $white;
+    }
+
+    .events {
+        background-color: tomato;
+        z-index: 0;
+    }
+
+    .music {
+        background-color: tan;
+        z-index: 1;
+        padding-bottom: 100px;
+    }
+
+    .promo {
+        background-color: teal;
+        z-index: 2;
+    }
+    #player-music {
+        padding-left: 400px;
+        padding-bottom: 100px;
+    }
+
+    .video-gallery {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .overlay-gallery {
+        position: absolute;
+        z-index: 4;
+        background-color: $transparent;
+    }
+}

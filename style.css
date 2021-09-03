@@ -1,0 +1,385 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #111;
+  color: #fff;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes slidein {
+  0% {
+    position: fixed;
+    background-color: #000000;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    min-height: 90px;
+    margin-top: 90px;
+    display: flex;
+    align-items: center;
+  }
+  100% {
+    position: fixed;
+    background-color: #000000;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    min-height: 100%;
+    margin-top: 90px;
+    display: flex;
+    align-items: center;
+  }
+}
+@keyframes slideout {
+  100% {
+    position: fixed;
+    background-color: #000000;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    min-height: 90px;
+    margin-top: 90px;
+    display: flex;
+    align-items: center;
+  }
+  0% {
+    position: fixed;
+    background-color: #000000;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    min-height: 100%;
+    margin-top: 90px;
+    display: flex;
+    align-items: center;
+  }
+}
+.overlay {
+  position: absolute;
+  background-color: rgba(17, 17, 17, 0.281);
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 1;
+}
+
+.foreground {
+  z-index: 3;
+}
+
+.video {
+  position: absolute;
+  right: 0;
+  bottom: 0%;
+  z-index: 0;
+}
+
+.video-container {
+  animation-name: fadein;
+  animation-duration: 5s;
+}
+
+#upper-border {
+  position: fixed;
+  background-color: #000000;
+  width: 100%;
+  right: 0;
+  top: 0;
+  min-height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#lower-border {
+  position: fixed;
+  background-color: #000000;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  min-height: 90px;
+  margin-top: 90px;
+  display: flex;
+  align-items: center;
+}
+
+.borders {
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.button {
+  background-color: #00000000;
+  border: solid;
+  color: #fff;
+  border-width: 1px;
+  display: inline-block;
+}
+
+.section-1 .middle {
+  z-index: 2;
+}
+.section-1 .go-button {
+  padding: 10px;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+.section-1 .go-button h3 {
+  margin: 0px;
+}
+.section-1 .go-button:hover {
+  color: #E50914;
+}
+
+.middle-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  margin-left: 8px;
+  max-width: 90px;
+}
+
+.socials {
+  margin-left: 24px;
+}
+
+.socials-logo {
+  max-width: 45px;
+  margin-left: 12px;
+}
+
+.bio {
+  margin-right: 24px;
+}
+.bio .bio-button {
+  padding: 5px;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+.bio .bio-button h5 {
+  margin: 0px;
+}
+.bio :hover {
+  color: #E50914;
+}
+.bio .close-button {
+  background-color: #00000000;
+  border: none;
+  display: none;
+}
+.bio .close-button img {
+  content: url("pictures/x-square.svg");
+}
+.bio .close-button :hover {
+  content: url("pictures/x-square-red.svg");
+}
+
+.go-page {
+  animation-fill-mode: forwards;
+  animation-name: slidein;
+  animation-direction: normal;
+  animation-duration: 1s;
+  position: fixed;
+  background-color: #000000;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  min-height: 90px;
+  margin-top: 90px;
+  display: flex;
+  justify-content: center;
+}
+.go-page .gallery-buttons {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.go-page .gallery-buttons button h3 {
+  padding: 10px;
+  margin: 0px;
+}
+.go-page .gallery-buttons :hover {
+  color: #E50914;
+}
+
+.go-page-reverse {
+  animation-fill-mode: forwards;
+  animation-name: slideout;
+  animation-direction: normal;
+  animation-duration: 1s;
+  position: fixed;
+  background-color: #000000;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  min-height: 90px;
+  margin-top: 90px;
+  display: flex;
+  justify-content: center;
+}
+.go-page-reverse .gallery-buttons {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.go-page-reverse .gallery-buttons button h3 {
+  padding: 10px;
+  margin: 0px;
+}
+.go-page-reverse .gallery-buttons :hover {
+  color: #E50914;
+}
+
+@keyframes gallery {
+  0% {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: none;
+    opacity: 0;
+    justify-content: space-between;
+  }
+  100% {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    opacity: 1;
+    justify-content: space-between;
+  }
+}
+@keyframes reverse-gallery {
+  100% {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: none;
+    opacity: 0;
+    justify-content: space-between;
+  }
+  0% {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    opacity: 1;
+    justify-content: space-between;
+  }
+}
+.gallery {
+  animation-name: gallery;
+  animation-duration: 2s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: none;
+  opacity: 0;
+}
+.gallery div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+.gallery .events {
+  background-color: tomato;
+  z-index: 0;
+}
+.gallery .music {
+  background-color: tan;
+  z-index: 1;
+  padding-bottom: 100px;
+}
+.gallery .promo {
+  background-color: teal;
+  z-index: 2;
+}
+.gallery #player-music {
+  padding-left: 400px;
+  padding-bottom: 100px;
+}
+.gallery .video-gallery {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.gallery .overlay-gallery {
+  position: absolute;
+  z-index: 4;
+  background-color: #00000000;
+}
+
+.reverse-gallery {
+  animation-name: reverse-gallery;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: none;
+  opacity: 0;
+}
+.reverse-gallery div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+.reverse-gallery .events {
+  background-color: tomato;
+  z-index: 0;
+}
+.reverse-gallery .music {
+  background-color: tan;
+  z-index: 1;
+  padding-bottom: 100px;
+}
+.reverse-gallery .promo {
+  background-color: teal;
+  z-index: 2;
+}
+.reverse-gallery #player-music {
+  padding-left: 400px;
+  padding-bottom: 100px;
+}
+.reverse-gallery .video-gallery {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.reverse-gallery .overlay-gallery {
+  position: absolute;
+  z-index: 4;
+  background-color: #00000000;
+}
+
+/*# sourceMappingURL=style.css.map */
