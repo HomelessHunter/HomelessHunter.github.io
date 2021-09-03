@@ -311,21 +311,14 @@ body {
   background-color: #fff;
 }
 .gallery .events {
-  background-color: tomato;
   z-index: 0;
 }
 .gallery .music {
-  background-color: tan;
   z-index: 1;
   padding-bottom: 100px;
 }
 .gallery .promo {
-  background-color: teal;
   z-index: 2;
-}
-.gallery #player-music {
-  padding-left: 400px;
-  padding-bottom: 100px;
 }
 .gallery .video-gallery {
   position: absolute;
